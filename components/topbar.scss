@@ -1,0 +1,36 @@
+.topbar {
+    box-shadow: none!important;
+    height: var(--topbar-height)!important;
+    background-color: var(--bg-2-99);
+    backdrop-filter: blur(10px);
+    
+    .name {
+        display: flex!important;
+        gap: 4px!important;
+        font-size: 20px!important;
+        font-weight: 600!important;
+        line-height: var(--topbar-height)!important;
+    }
+    
+    .name::before {
+        --size: calc(50px - (8px * 2));
+        
+        content: '';
+        background-image: url('img/logo.png');
+        background-position: center;
+        background-size: contain;
+        display: inline-block;
+        height: var(--size);
+        width: var(--size);
+        margin: 8px;
+        border: none!important;
+   }
+}
+
+.avatar {
+    width: var(--topbar-height)!important;
+    height: var(--topbar-height)!important;
+    margin: 0!important;
+    padding: 8px;
+    border: none!important;
+}

@@ -1,16 +1,66 @@
 @use 'fonts.scss';
-
-#app {
-    --border-radius: 12px!important;
-}
+@use 'components/input.scss';
+@use 'components/sidebar.scss';
+@use 'components/tabs.scss';
+@use 'components/topbar.scss';
 
 :root {
+    --bg-0: #36353c;
+    --bg-1: #242329;
+    --bg-2: #1b1a1f;
+    --bg-3: #0c0b0e;
+
+    --bg-0-50: #36353c50;
+    --bg-1-50: #24232950;
+    --bg-2-50: #1b1a1f50;
+    --bg-3-50: #0c0b0e50;
+
+    --bg-0-99: #36353c99;
+    --bg-1-99: #24232999;
+    --bg-2-99: #1b1a1f99;
+    --bg-3-99: #0c0b0e99;
+
+    --tx-1: #ffffff;
+    --tx-2: #d3d4d4;
+    --tx-3: #a8afaf;
+
+    --success: #18cb6e;
+
+    --orchid: #da70d6;
+    --orchid-50: #da70d650;
+    --orchid-25: #da70d625;
+
+    --funky-effect:
+        inset 0 -0.1rem 2.5px #00000020, inset 0 0.035rem 1px #ffffff05,
+        inset 0 0.055rem 2.5px #ffffff05;
+    
     --standard-font: "Inter", system-ui, sans-serif!important;
     --headline-font: "Inter", system-ui, sans-serif!important;
     --title-font: "Inter", system-ui, sans-serif!important;
     --monospace-font: "JetBrains Mono", monospace!important;
+
+    --topbar-height: 50px;
 }
 
 * {
+    --background: var(--bg-1)!important;
+    --backdrop: var(--bg-1)!important;
+    
+    --primary: var(--orchid);
+    --primary-hover: var(--orchid-25);
+
+    --border-radius: 12px!important;
+    
+    --text: var(--tx-2);
+    --text-disabled: var(--tx-3);
+    
 	font-feature-settings: 'cv05', 'cv08';
+}
+
+.main {
+    padding-top: var(--topbar-height);
+
+    .serverview, .serverlist, .nodelist, .userlist, .templatelist, .panel, .email {
+        box-shadow: none!important;
+    }
 }

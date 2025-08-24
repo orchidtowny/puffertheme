@@ -1,0 +1,23 @@
+.sidebar {
+    top: var(--topbar-height);
+    height: calc(var(--inner-height) - env(safe-area-inset-bottom) - var(--topbar-height) - 12px * 2);
+    background-color: var(--bg-1)!important;
+    border-right: 1px solid var(--bg-0);
+    padding: 12px 0;
+    
+    box-shadow: none!important;
+    
+    .list-item {
+        padding: 12px 16px!important;
+
+        .list-item-icon {
+            .icon {
+                font-size: 20px!important;
+            }
+        }
+
+        .list-item-content {
+            font-size: 16px!important;
+        }
+    }
+}
