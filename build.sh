@@ -1,0 +1,1 @@
+tar --exclude='./.*' -cvf SamuelTheme.tar .
