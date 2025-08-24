@@ -1,0 +1,16 @@
+@use 'fonts.scss';
+
+#app {
+    --border-radius: 12px!important;
+}
+
+:root {
+    --standard-font: "Inter", system-ui, sans-serif!important;
+    --headline-font: "Inter", system-ui, sans-serif!important;
+    --title-font: "Inter", system-ui, sans-serif!important;
+    --monospace-font: "JetBrains Mono", monospace!important;
+}
+
+* {
+	font-feature-settings: 'cv05', 'cv08';
+}
