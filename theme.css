@@ -1,9 +1,9 @@
-@use 'fonts.scss';
-@use 'components/input.scss';
-@use 'components/sidebar.scss';
-@use 'components/tabs.scss';
-@use 'components/topbar.scss';
-@use 'components/button.scss';
+@import 'fonts.css';
+@import 'components/input.css';
+@import 'components/sidebar.css';
+@import 'components/tabs.css';
+@import 'components/topbar.css';
+@import 'components/button.css';
 
 :root {
     --bg-0: #45444d;
