@@ -37,10 +37,12 @@
     
     --standard-font: "Inter", system-ui, sans-serif!important;
     --headline-font: "Inter", system-ui, sans-serif!important;
-    --title-font: "Inter", system-ui, sans-serif!important;
+    --title-font: "Commissioner", system-ui, sans-serif!important;
     --monospace-font: "JetBrains Mono", monospace!important;
 
     --topbar-height: 50px;
+    
+    font-size: calc(100% - 2px);
 }
 
 * {
@@ -99,5 +101,15 @@
                 margin: 0;
             }
         }
+    }
+}
+
+.menu.open {
+    background-color: var(--bg-2)!important;
+    
+    .button {
+        display: flex!important;
+        align-items: center!important;
+        justify-content: left!important;
     }
 }
