@@ -3,19 +3,20 @@
 @use 'components/sidebar.scss';
 @use 'components/tabs.scss';
 @use 'components/topbar.scss';
+@use 'components/button.scss';
 
 :root {
-    --bg-0: #36353c;
+    --bg-0: #45444d;
     --bg-1: #242329;
     --bg-2: #1b1a1f;
     --bg-3: #0c0b0e;
 
-    --bg-0-50: #36353c50;
+    --bg-0-50: #45444d50;
     --bg-1-50: #24232950;
     --bg-2-50: #1b1a1f50;
     --bg-3-50: #0c0b0e50;
 
-    --bg-0-99: #36353c99;
+    --bg-0-99: #45444d99;
     --bg-1-99: #24232999;
     --bg-2-99: #1b1a1f99;
     --bg-3-99: #0c0b0e99;
@@ -60,7 +61,43 @@
 .main {
     padding-top: var(--topbar-height);
 
-    .serverview, .serverlist, .nodelist, .userlist, .templatelist, .panel, .email {
+    div {
         box-shadow: none!important;
+    }
+}
+
+.command {
+    .input-field-wrapper {
+        .input-field {
+            border: 1px solid var(--bg-0)!important;
+        }
+    }
+}
+
+.editor {
+    .overlay {
+        max-width: 75vw!important;
+        padding: 1px;
+            
+        .overlay-header {
+            display: flex;
+            align-items: center;
+            padding: 5px 16px;
+            
+            h1 {
+                font-size: 15px;
+                font-weight: normal;
+                font-family: var(--monospace-font);
+                margin: 0;
+            }
+            
+            h1::before {
+                content: './';
+            }
+            
+            .button {
+                margin: 0;
+            }
+        }
     }
 }

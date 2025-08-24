@@ -34,3 +34,21 @@
     padding: 8px;
     border: none!important;
 }
+
+.global-search {
+    .input-field-wrapper {
+        .input-text {
+            margin: 0!important;
+        }
+    }
+}
+
+.sidebar-toggle {
+    margin: auto;
+    margin-left: 10px;
+    padding: 0!important;
+}
+
+.sidebar.open ~ .main::before {
+    background: var(--bg-0-99)!important;
+}
