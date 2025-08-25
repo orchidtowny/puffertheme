@@ -1,5 +1,5 @@
 {
-    "keepDefaultCss": true,
-    "sidebarClosedBelow": 1200,
-    "settings": {}
+  "keepDefaultCss": false,
+  "sidebarClosedBelow": 1200,
+  "settings": {}
 }

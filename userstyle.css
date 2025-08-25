@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+:root {
+    --bg-0: #45444d;
+    --bg-1: #242329;
+    --bg-2: #1b1a1f;
+    --bg-3: #0c0b0e;
+
+    --bg-0-50: #45444d50;
+    --bg-1-50: #24232950;
+    --bg-2-50: #1b1a1f50;
+    --bg-3-50: #0c0b0e50;
+
+    --bg-0-99: #45444d99;
+    --bg-1-99: #24232999;
+    --bg-2-99: #1b1a1f99;
+    --bg-3-99: #0c0b0e99;
+
+    --tx-1: #ffffff;
+    --tx-2: #d3d4d4;
+    --tx-3: #a8afaf;
+
+    --success: #18cb6e;
+
+    --orchid: #da70d6;
+    --orchid-50: #da70d650;
+    --orchid-25: #da70d625;
+
+    --funky-effect:
+        inset 0 -0.1rem 2.5px #00000020, inset 0 0.035rem 1px #ffffff05,
+        inset 0 0.055rem 2.5px #ffffff05;
+    
+    --standard-font: "Inter", system-ui, sans-serif!important;
+    --headline-font: "Inter", system-ui, sans-serif!important;
+    --title-font: "Commissioner", system-ui, sans-serif!important;
+    --monospace-font: "JetBrains Mono", monospace!important;
+
+    --topbar-height: 50px;
+    
+    font-size: calc(100% - 2px);
+}
+
+* {
+    --background: var(--bg-1)!important;
+    --backdrop: var(--bg-1)!important;
+    
+    --primary: var(--orchid);
+    --primary-hover: var(--orchid-25);
+
+    --border-radius: 12px!important;
+    
+    --text: var(--tx-2);
+    --text-disabled: var(--tx-3);
+    
+	font-feature-settings: 'cv05', 'cv08';
+}
+
+.main {
+    padding-top: var(--topbar-height);
+
+    div {
+        box-shadow: none!important;
+    }
+}
+
+.command {
+    .input-field-wrapper {
+        .input-field {
+            border: 1px solid var(--bg-0)!important;
+        }
+    }
+}
+
+.editor {
+    .overlay {
+        max-width: 75vw!important;
+        padding: 1px;
+            
+        .overlay-header {
+            display: flex;
+            align-items: center;
+            padding: 5px 16px;
+            
+            h1 {
+                font-size: 15px;
+                font-weight: normal;
+                font-family: var(--monospace-font);
+                margin: 0;
+            }
+            
+            h1::before {
+                content: './';
+            }
+            
+            .button {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.menu.open {
+    background-color: var(--bg-2)!important;
+    
+    .button {
+        display: flex!important;
+        align-items: center!important;
+        justify-content: left!important;
+    }
+}
+
+.button {
+    box-shadow: none!important;
+}
+
+.sidebar {
+    top: var(--topbar-height);
+    height: calc(var(--inner-height) - env(safe-area-inset-bottom) - var(--topbar-height) - 12px * 2);
+    background-color: var(--bg-1)!important;
+    border-right: 1px solid var(--bg-0);
+    padding: 12px 0;
+    
+    box-shadow: none!important;
+    
+    .list-item {
+        padding: 12px 16px!important;
+
+        .list-item-icon {
+            .icon {
+                font-size: 20px!important;
+            }
+        }
+
+        .list-item-content {
+            font-size: 16px!important;
+            font-weight: normal!important;
+        }
+    }
+}
+
+.tab-buttons {
+    .tab-button {
+        display: flex!important;
+        flex-direction: row!important;
+        align-items: center!important;
+        justify-content: center!important;
+        gap: 10px!important;
+        font-size: 18px!important;
+    }
+}
+
+.topbar {
+    box-shadow: none!important;
+    height: var(--topbar-height)!important;
+    background-color: var(--bg-2-99);
+    backdrop-filter: blur(10px);
+    
+    .name {
+        display: flex!important;
+        gap: 4px!important;
+        font-size: 20px!important;
+        font-weight: 600!important;
+        line-height: var(--topbar-height)!important;
+    }
+    
+    .name::before {
+        --size: calc(50px - (8px * 2));
+        
+        content: '';
+        background-image: url('https://orchidmc.org/logo.png');
+        background-position: center;
+        background-size: contain;
+        display: inline-block;
+        height: var(--size);
+        width: var(--size);
+        margin: 8px;
+        border: none!important;
+   }
+}
+
+.avatar {
+    width: var(--topbar-height)!important;
+    height: var(--topbar-height)!important;
+    margin: 0!important;
+    padding: 8px;
+    border: none!important;
+}
+
+.global-search {
+    .input-field-wrapper {
+        .input-text {
+            margin: 0!important;
+        }
+    }
+}
+
+.sidebar-toggle {
+    margin: auto;
+    margin-left: 10px;
+    padding: 0!important;
+}
+
+.sidebar.open ~ .main::before {
+    background: var(--bg-0-99)!important;
+}
